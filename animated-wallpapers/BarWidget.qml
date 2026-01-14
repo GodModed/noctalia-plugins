@@ -54,6 +54,7 @@ Rectangle {
       columnSpacing: Style.marginS
 
       NIcon {
+        id: playPauseIcon
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         icon: pluginApi?.pluginSettings?.paused ? "player-play-filled" : "player-paused-filled"
         color: root.hovered ? Color.mOnHover : Color.mOnSurface
@@ -67,6 +68,7 @@ Rectangle {
 
       onClicked: {
         pluginApi.pluginSettings.paused = !pluginApi.pluginSettings.paused;
+        layout.playPauseIcon.icon = pluginApi?.pluginSettings?.paused ? "player-paused-filled" : "player-play-filled";
         pluginApi.saveSettings();
         pluginApi.mainInstance.pause();
       }
