@@ -1,0 +1,24 @@
+{
+    "id": "animated-wallpapers",
+    "name": "Animated Wallpapers",
+    "version": "1.0.0",
+    "minNoctaliaVersion": "3.6.0",
+    "author": "GodModed",
+    "license": "MIT",
+    "repository": "https://github.com/godmoded/noctalia-plugins",
+    "description": "Allows you to set animated wallpapers using mp4 files. Also adds a button to control playback from the taskbar.",
+    "entryPoints": {
+        "settings": "Settings.qml",
+        "main": "Main.qml",
+        "barWidget": "BarWidget.qml"
+    },
+    "dependencies": {
+        "plugins": []
+    },
+    "metadata": {
+        "defaultSettings": {
+            "paused": false,
+            "wallpaperPath": ""
+        }
+    }
+}
