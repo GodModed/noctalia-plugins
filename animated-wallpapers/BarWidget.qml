@@ -55,7 +55,7 @@ Rectangle {
 
       NIcon {
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        icon: "player-pause-filled"
+        icon: pluginApi?.pluginSettings?.paused ? "player-play-filled" : "player-paused-filled"
         color: root.hovered ? Color.mOnHover : Color.mOnSurface
       }
     }
