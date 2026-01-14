@@ -8,3 +8,7 @@
 ## Plugins
 
 * Animated Wallpapers - Adds support for animated wallpapers from within Noctalia
+    - Dependencies:
+        - ffmpeg
+        - mpvpaper
+        - socat
