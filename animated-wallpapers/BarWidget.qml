@@ -56,7 +56,7 @@ Rectangle {
       NIcon {
         id: playPauseIcon
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        icon: "media-playback-pause"
+        icon: "media-pause"
         color: root.hovered ? Color.mOnHover : Color.mOnSurface
       }
     }
@@ -68,7 +68,7 @@ Rectangle {
 
       onClicked: {
         pluginApi.pluginSettings.paused = !pluginApi.pluginSettings.paused;
-        root.layout.grid.playPauseIcon.icon = pluginApi.pluginSettings.paused ? "media-playback-start" : "media-playback-pause";
+        root.layout.grid.playPauseIcon.icon = pluginApi.pluginSettings.paused ? "media-play" : "media-pause";
         pluginApi.saveSettings();
         pluginApi.mainInstance.pause();
       }
