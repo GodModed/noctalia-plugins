@@ -11,6 +11,10 @@ Item {
     property var pluginApi: null
 
     Process {
+        id: createDir
+    }
+
+    Process {
         id: wallpaperProcess
     }
 
@@ -47,7 +51,11 @@ Item {
     }
 
     Component.onCompleted: {
-        ToastService.showNotice("Loaded wallpaper")
+
+        const command = ['mkdir', '-p', Quickshell.env("HOME") + '/Pictures/AnimatedWallpapers']
+        createDir.exec(command)
+        Logger.i("animated-wallpapers", "Creating wallpaper directory with command: " + command.join(" "))
+
         refresh()
     }
 
